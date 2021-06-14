@@ -1,0 +1,43 @@
+/**
+ * 
+ */
+package lecture4Practise;
+
+import java.math.BigDecimal;
+
+/**
+ * @author bilal
+ *
+ */
+public class Product {
+    private String name;
+    private BigDecimal price;
+    public Product(String name,double price)
+    {
+    	this(name);
+    	this.price = BigDecimal.valueOf(price);
+    }
+    public String getName()
+    {
+    	return this.name;
+    }
+    public BigDecimal getPrice()
+    {
+    	return this.price;
+    }
+    public Product(String name)
+    {
+    	this.name = name;
+        //System.out.println("The name is ==> "+name);
+    	this.price = BigDecimal.ZERO;
+    }
+    
+	public static void main(String[] args) {
+		// Main Method of Classes
+//        Product p1 = new Product("Water");
+        Product p2 = new Product("Tea",1.99);
+        String s = p2.toString();
+        System.out.println(s);
+	}
+
+}
